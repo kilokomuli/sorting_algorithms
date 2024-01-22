@@ -49,13 +49,13 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
 
 int lomuto_partition(int *array, int low, int high, size_t size)
 {
-	int piv = array[high];
+	int pivot = array[high];
 	int i = low - 1;
 	int j, tmp;
 
 	for (j = low; j <= high - 1; ++j)
 	{
-		if (array[j] <= piv)
+		if (array[j] <= pivot)
 		{
 			++i;
 			tmp = array[i];
