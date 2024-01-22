@@ -1,4 +1,6 @@
 #include "sort.h"
+#include <stdbool.h>
+
 /**
  * swap_int - swapss two integers
  * @a: pointer to first integer
@@ -21,24 +23,26 @@ void swap_int(int *a, int *b)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j;
-	int swap;
+	size_t i, len = size;
+	bool bubbly = false;
 
-	for (i = 0; i < size - 1; ++i)
+	if (array == NULL || size < 2)
+		return;
+
+	while (bubbly == false)
 	{
-		swap = 0;
+		bubbly = true;
 
-		for (j = 0; j < size - i - 1; ++j)
+		for (i = 0; i < len  - i - 1; i++)
 		{
-			if (array[j] > array[j + 1])
+			if (array[i] > array[i + 1])
 			{
-				swap_int(&array[j], &array[j + 1]);
-				swap = 1;
+				swap_int(array + i, array + i + 1);
 
 				print_array(array, size);
+				bubbly = false;
 			}
 		}
-		if (swap == 0)
-			break;
+		len--;
 	}
 }
