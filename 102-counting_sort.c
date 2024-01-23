@@ -19,8 +19,8 @@ int find_max(int *array, size_t size)
 }
 
 /**
- * counting_sort - sorts an array of integers in ascending order using the counting
- * sort algorithm
+ * counting_sort - sorts an array of integers in ascending
+ * order using the counting sort algorithm
  * @array: The array to be sorted
  * @size: Number of elements in array
  */
