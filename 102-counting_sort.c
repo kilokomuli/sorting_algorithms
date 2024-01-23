@@ -28,7 +28,7 @@ void counting_sort(int *array, size_t size)
 {
 	int *count, *sort, max, i;
 
-	if (array == NULL || size < 22)
+	if (array == NULL || size < 2)
 		return;
 
 	sort = malloc(sizeof(int) * size);
