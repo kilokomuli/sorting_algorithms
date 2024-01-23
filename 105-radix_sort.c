@@ -23,10 +23,11 @@ int get_max(int *array, int size)
 }
 
 /**
- * counting_sort -  Perform counting sort on the array based on the
+ * countingSort -  Perform counting sort on the array based on the
  * signficant digit
  * @array: Array to be sorted
  * @size: Number of elements in the array
+ * @sig: Sirginificant digit to sort
  * @exp: significant digit to consider
  */
 
@@ -58,6 +59,7 @@ void countingSort(int *array, size_t size, int sig, int *exp)
 void radix_sort(int *array, size_t size)
 {
 	int max, sig, *exp;
+
 	if (array == NULL || size < 2)
 		return;
 
